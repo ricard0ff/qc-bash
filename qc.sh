@@ -72,7 +72,7 @@ gcloud compute instance-groups list
 
 echo -e "\n${GREEN}12 Instances templates list"
 echo "--------------------------------------------------------------------------------------------------------${RESET}"
-gcloud compute instance-template list
+gcloud compute instance-templates list
 
 echo -e "\n${GREEN}13 Instances list"
 echo "--------------------------------------------------------------------------------------------------------${RESET}"
@@ -94,9 +94,9 @@ echo -e "\n${GREEN}17 List Service Accounts"
 echo "--------------------------------------------------------------------------------------------------------${RESET}"
 for item in $(gcloud projects get-iam-policy $PROJECT |grep serviceAccount|cut -f2 -d':'); do echo "$item";gcloud iam service-accounts keys list --iam-account "$item";done
 
-echo -e "\n${GREEN}18 Cloud DNS"
-echo "--------------------------------------------------------------------------------------------------------${RESET}"
-gcloud dns managed-zones list
+#echo -e "\n${GREEN}18 Cloud DNS"
+#echo "--------------------------------------------------------------------------------------------------------${RESET}"
+#gcloud dns managed-zones list
 
 
 
